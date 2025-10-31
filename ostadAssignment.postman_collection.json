@@ -1,0 +1,132 @@
+{
+	"info": {
+		"_postman_id": "dd5e1729-53b7-47c5-acae-e4e7d53a6ae8",
+		"name": "ostadAssignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "45053373"
+	},
+	"item": [
+		{
+			"name": "searchProduct",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "viewProduct",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://demo.evershop.io/women/nike-odyssey-react-flyknit-2-160",
+					"protocol": "https",
+					"host": [
+						"demo",
+						"evershop",
+						"io"
+					],
+					"path": [
+						"women",
+						"nike-odyssey-react-flyknit-2-160"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "color&sizeSelect",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "__stripe_mid=9a681e3d-554e-4e0b-a4a9-844d7f3a10048a6891; sid=s%3AJvIRY6xMoTUYD_-wlsTyeriBX3MTgcoP.j%2FfbumV5r2dZT7JidbbQobp6pXGCa1Cc6DT%2BE6FpCjA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://demo.evershop.io/women/nike-odyssey-react-flyknit-2-160?size=25&color=14&ajax=true\n\n",
+					"protocol": "https",
+					"host": [
+						"demo",
+						"evershop",
+						"io"
+					],
+					"path": [
+						"women",
+						"nike-odyssey-react-flyknit-2-160"
+					],
+					"query": [
+						{
+							"key": "size",
+							"value": "25",
+							"description": "S"
+						},
+						{
+							"key": "color",
+							"value": "14",
+							"description": "Black"
+						},
+						{
+							"key": "ajax",
+							"value": "true\n\n"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addToCart",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "__stripe_mid=9a681e3d-554e-4e0b-a4a9-844d7f3a10048a6891; sid=s%3A2mUUE2HlO3NisDOHF3yPU6XoLAR5J0Gc.pMNwbvf2RFjcjGNllS85WOf72iI0%2BksbIz1BR0oa3%2Fw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"qty\": \"1\",\r\n     \"sku\": \"NJC93155-Black-S\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://demo.evershop.io/api/cart/mine/items",
+					"protocol": "https",
+					"host": [
+						"demo",
+						"evershop",
+						"io"
+					],
+					"path": [
+						"api",
+						"cart",
+						"mine",
+						"items"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
